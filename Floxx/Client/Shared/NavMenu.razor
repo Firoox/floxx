@@ -1,0 +1,18 @@
+﻿@inject Microsoft.Extensions.Localization.IStringLocalizer<Shared> localizer
+@using MudBlazor
+
+<UserCard />
+<MudNavMenu>
+    <MudNavLink Href="/" Match="NavLinkMatch.All" Icon="@Icons.Material.Outlined.Home">@localizer["NAVBAR.HOME"]</MudNavLink>
+</MudNavMenu>
+
+    @code {
+        private bool collapseNavMenu = true;
+
+        private string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+        private void ToggleNavMenu()
+        {
+            collapseNavMenu = !collapseNavMenu;
+        }
+    }

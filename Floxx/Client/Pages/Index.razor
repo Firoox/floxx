@@ -1,0 +1,26 @@
+﻿@page "/"
+@using Floxx.Web.Shared.DTO.Workflows
+@using Floxx.Shared.Interfaces
+
+<h1>Hello, world!</h1>
+
+Welcome to your new app.
+
+<MudButton Variant="Variant.Filled" OnClick="TestClicked">Test</MudButton>
+
+@code
+{
+
+    private async Task TestClicked()
+    {
+        //IResult<WorkflowResponse> response = await workflowManager.UpdateAsync(new UpdateWorkflowRequest()
+        //{
+        //    Id = 23,
+        //    DisplayNameEnglish = "One",
+        //    DisplayNameGerman = "Eins"
+        //});
+
+        await workflowManager.DeleteAsync(23);
+
+    }
+}

@@ -1,0 +1,33 @@
+﻿@*Libraries*@
+@using System.Net.Http
+@using System.Net.Http.Json
+@using Floxx.Client.Authentication
+@using Floxx.Client.Managers.Identity.Account
+@using Floxx.Client.Managers.Identity.Authentication
+@using Floxx.Client.Managers.Interceptors
+@using Floxx.Client.Managers.Preferences
+@using Floxx.Client.Managers.Workflow
+@using Floxx.Client.Pages.Authentication
+@using Floxx.Client.Shared
+@using Floxx.Client.Shared.Components
+@using Microsoft.AspNetCore.Authorization
+@using Microsoft.AspNetCore.Components.Authorization
+@using Microsoft.AspNetCore.Components.Forms
+@using Microsoft.AspNetCore.Components.Routing
+@using Microsoft.AspNetCore.Components.Web
+@using Microsoft.AspNetCore.Components.Web.Virtualization
+@using Microsoft.AspNetCore.Components.WebAssembly.Http
+@using Microsoft.JSInterop
+@using Microsoft.AspNetCore.Identity;
+@using MudBlazor
+@attribute [Authorize]
+@inject FloxxStateProvider stateProvider
+@inject IAuthenticationManager authenticationManager
+@inject IAccountManager accountManager
+@inject NavigationManager navigationManager
+@inject IAuthorizationService authorizationService
+@inject ISnackbar snackBar
+@inject IHttpInterceptorManager interceptor
+@inject PreferenceManager preferenceManager
+@inject IDialogService dialogService
+@inject WorkflowManager workflowManager 
